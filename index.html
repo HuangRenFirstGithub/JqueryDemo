@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<!-- Add jQuery library -->
+<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="source/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
+<script type="text/javascript" src="source/jquery.fancybox.pack.js?v=2.1.7"></script>
+
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet" href="source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+<link rel="stylesheet" href="source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+<script type="text/javascript" src="source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<head>
+<meta charset="utf-8">
+<title>JqueryDemo</title>
+</head>
+<script>
+$(document).ready(function() {
+ $("#single_3").fancybox({
+    	openEffect : 'none',
+    	closeEffect	: 'none',
+    	helpers : {
+    		title : {
+    			type : 'outside'
+    		}
+    	}
+    });
+
+	
+$(".fancybox").fancybox({
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+$(".various").fancybox({
+		maxWidth	: 800,
+		maxHeight	: 600,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});	
+</script>
+<body>
+<!--單張照片效果-->
+<a id="single_3" title="第一張圖片測試" href="images/3.jpeg"><img src="images/3_1.jpg" width="500" height="333" alt="第一張圖片測試小圖"/></a>
+
+<!--多張圖片輪播-->
+<p> <a class="fancybox" rel="gallery1" href="images/1.jpeg"><img src="images/1-1.jpg" width="500" height="333" alt=""/></a>
+  <a class="fancybox" rel="gallery1" href="images/2.jpeg"><img src="images/2-1.jpg" width="500" height="333" alt=""/></a>
+  <a class="fancybox" rel="gallery1" href="images/4.jpg"><img src="images/4-1.jpg" width="500" height="333" alt=""/></a>
+</p>
+<!--youtube影片輪播和切換不同影片效果-->
+<p>
+	<a class="various fancybox.iframe" rel="gallery1" href="https://www.youtube.com/embed/PzrYzw7rIOQ">連結到Youtube</a>
+	
+	<a class="various fancybox.iframe" rel="gallery1" href="https://www.youtube.com/embed/Q3vwwBta5Pc">連結到Youtube</a>
+</p>
+</body>
+</html>
